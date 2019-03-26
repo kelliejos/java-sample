@@ -1,0 +1,7 @@
+stages:
+- stage: stage1
+  jobs: 
+  - job: job1
+    pool: 'Hosted'
+    strategy: 
+      parallel: 2
