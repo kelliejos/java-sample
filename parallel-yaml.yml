@@ -1,7 +1,12 @@
 stages:
-- stage: stage1
-  jobs: 
-  - job: job1
-    pool: 'Hosted'
-    strategy: 
-      parallel: 2
+- stage: stage1
+  jobs:
+  - job: job1
+    pool:
+      vmImage: 'Ubuntu-16.04'
+    strategy:
+      matrix: 
+        config1:
+          coolVariable: 1
+        config2:
+          coolVariable: 2
